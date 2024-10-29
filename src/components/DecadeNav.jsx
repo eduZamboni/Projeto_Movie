@@ -1,7 +1,6 @@
-import React from 'react';
 import styles from './DecadeNav.module.css';
 
-function DecadeNavigation({ onDecadeChange }) {
+function DecadeNavigation({ onDecadeChange, selectedDecade }) {
   const decades = [1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020];
 
   return (
@@ -9,7 +8,7 @@ function DecadeNavigation({ onDecadeChange }) {
       {decades.map((decade) => (
         <button
           key={decade}
-          className={styles.button}
+          className={`${styles.button} ${selectedDecade === decade ? styles.active : ''}`}
           onClick={() => onDecadeChange(decade)}
         >
           {decade}s

@@ -8,8 +8,8 @@ function Home() {
 
   return (
     <main className={styles.main}>
-      <h2>Top 10 Filmes da Década de {selectedDecade}</h2>
-      <DecadeNavigation onDecadeChange={setSelectedDecade} />
+      <DecadeNavigation onDecadeChange={setSelectedDecade} selectedDecade={selectedDecade} />
+      <h2 className={styles.title}>Top 10 Filmes da Década de {selectedDecade}</h2>
       <Ranking decade={selectedDecade} />
     </main>
   );

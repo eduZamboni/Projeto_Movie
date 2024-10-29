@@ -1,13 +1,26 @@
 .navigation {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin-bottom: 20px;
-  }
-  
-  .button {
-    margin: 5px;
-    padding: 10px 15px;
-    font-size: 16px;
-    cursor: pointer;
-  }
+  display: flex;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 20px;
+}
+
+.button {
+  background-color: transparent;
+  color: #B3B3B3;
+  padding: 10px 15px;
+  margin-right: 10px;
+  font-size: 16px;
+  flex: none;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+.button:hover {
+  color: #FFFFFF;
+}
+
+.active {
+  color: #FFFFFF;
+  border-color: #E50914;
+}
