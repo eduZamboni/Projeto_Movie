@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from '../config';
 import styles from './Details.module.css';
+import UserReviews from './UserReviews';
 
 function Details() {
   const { id } = useParams();
@@ -49,6 +50,8 @@ function Details() {
           <strong>Avaliação:</strong> {movie.vote_average}
         </p>
         <Link to="/" className={styles.backButton}>Voltar</Link>
+
+        <UserReviews movieId={id} />
       </div>
     </div>
   );
